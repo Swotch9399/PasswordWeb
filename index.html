@@ -1,59 +1,75 @@
-<!-- INSERT HTML HERE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
 <div class="container">
-	<h2>Password Generator</h2>
-	<div class="result-container">
-		<span id="result"></span>
-		<button class="btn" id="clipboard">
-			<i class="fa-solid fa-clipboard"></i>
-		</button>
-	</div>
-	<div class="settings">
-		<div class="setting">
-			<label>Password length</label>
-			<input type="number" id="length" min='4' max='20' value='20' />
-		</div>
-		<div class="setting">
-			<label>Include uppercase letters</label> 
-			<input type="checkbox" id="uppercase" checked />
-		</div>
-		<div class="setting">
-			<label>Include lowercase letters</label> 
-			<input type="checkbox" id="lowercase" checked />
-		</div>
-		<div class="setting">
-			<label>Include numbers</label> 
-			<input type="checkbox" id="numbers" checked />
-		</div>
-		<div class="setting">
-			<label>Include symbols</label> 
-			<input type="checkbox" id="symbols" checked />
-		</div>
-	</div>
-	<button class="btn btn-large" id="generate">
-		Generate password
-	</button>
+  <h2>Password Generator</h2>
+  <div class="result-container">
+    <span id="result"></span>
+    <button class="btn" id="clipboard">
+      <i class="fas fa-clipboard"></i>
+    </button>
+  </div>
+  <div class="settings">
+    <div class="setting">
+      <label for="length">Password length</label>
+      <input type="number" id="length" min="4" max="20" value="20" />
+    </div>
+    <div class="setting">
+      <label for="uppercase">Include uppercase letters</label>
+      <input type="checkbox" id="uppercase" checked />
+    </div>
+    <div class="setting">
+      <label for="lowercase">Include lowercase letters</label>
+      <input type="checkbox" id="lowercase" checked />
+    </div>
+    <div class="setting">
+      <label for="numbers">Include numbers</label>
+      <input type="checkbox" id="numbers" checked />
+    </div>
+    <div class="setting">
+      <label for="symbols">Include symbols</label>
+      <input type="checkbox" id="symbols" checked />
+    </div>
+  </div>
+  <button class="btn btn-large" id="generate">
+    Generate password
+  </button>
 </div>
 
-<!-- SOCIAL PANEL HTML -->
 <div class="social-panel-container">
-	<div class="social-panel">
-		<p>Created with by
-			<a target="_blank" href="https://swotch.vercel.app">Swotch</a></p>
-		<button class="close-btn"><i class="fas fa-times"></i></button>
-		<h4>Contact</h4>
-		<ul>
-			<li>
-				<a href="https://swotch.vercel.app/contact" target="_blank">
-					<i class="fa-solid fa-globe"></i>
-				</a>
-			</li>
-		</ul>
-	</div>
+  <div class="social-panel">
+    <p>Created with by
+      <a target="_blank" href="https://swotch.vercel.app">Swotch</a>
+    </p>
+    <button class="close-btn"><i class="fas fa-times"></i></button>
+    <h4>Contact</h4>
+    <ul>
+      <li>
+        <a href="https://swotch.vercel.app/contact" target="_blank">
+          <i class="fas fa-globe"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
+
 <button class="floating-btn">
-	Contact
+  Contact
 </button>
 
 <div class="floating-text">
-	Created with by <a href="https://swotch.vercel.app" target="_blank">Swotch</a>
+  Created with by <a href="https://swotch.vercel.app" target="_blank">Swotch</a>
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
