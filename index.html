@@ -97,7 +97,66 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 15px 0;
+      margin: 10px 0;
+      gap: 10px;
+    }
+
+    .setting input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      border: 2px solid #6C5CE7;
+      transition: all 0.3s ease;
+    }
+
+    .setting input[type="checkbox"]:checked {
+      background-color: #6C5CE7;
+      border-color: #6C5CE7;
+    }
+
+    .setting input[type="checkbox"]:checked::after {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+    }
+
+    .setting input[type="checkbox"]:hover {
+      border-color: #5e50d4;
+    }
+
+    .setting input[type="number"] {
+      width: 60px;
+      padding: 6px 8px;
+      border: 2px solid #6C5CE7;
+      border-radius: 5px;
+      background-color: #23235B;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .setting input[type="number"]:focus {
+      outline: none;
+      border-color: #5e50d4;
+      box-shadow: 0 0 5px rgba(108, 92, 231, 0.5);
+    }
+
+    .setting input[type="number"]::-webkit-inner-spin-button,
+    .setting input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
 
     .saved-passwords {
@@ -289,7 +348,7 @@
   }
 
   function getRandomSymbol() {
-    const symbols = '!@#$%^&*(){}[]=<>/,.';
+    const symbols = '!@#$%^&*(){}[]=<>/,.'; 
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
 
